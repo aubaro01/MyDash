@@ -40,40 +40,42 @@
   echo '    <h2 class="text-center mb-4">Recursos</h2>';
   echo '    <div class="row">';
 
-  // Cards (Usar um loop para economizar código)
   $recursos = [
     ["Gestão de Clientes", "Organize seus clientes de forma eficiente.", "bi-people"],
     ["Controle de Veículos", "Acompanhe veículos e serviços realizados.", "bi-car-front"],
     ["Agendamentos", "Gerencie e automatize as marcações.", "bi-calendar-check"]
-  ];
+];
 
-  foreach ($recursos as $recurso) {
-    echo '    <div class="col-md-4 mb-4">';
-    echo '      <div class="card h-100 shadow-sm">';
-    echo '        <div class="card-body text-center">';
-    echo '          <div class="mb-3">';
-    echo '            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi ' . $recurso[2] . ' text-dark" viewBox="0 0 16 16">';
-    echo '              <path d="M13 7c0 1.105-.672 2-1.5 2S10 8.105 10 7s.672-2 1.5-2S13 5.895 13 7zm-9 0c0 1.105.672 2 1.5 2S7 8.105 7 7s-.672-2-1.5-2S4 5.895 4 7zM10 8.5c.828 0 1.5.895 1.5 2S10.828 13 10 13H6c-.828 0-1.5-.895-1.5-2S5.172 8.5 6 8.5h4zM4.5 6a2.5 2.5 0 1 1 5 0 2.5 2.5 0 0 1-5 0z" />';
-    echo '            </svg>';
-    echo '          </div>';
-    echo '          <h5 class="card-title">' . $recurso[0] . '</h5>';
-    echo '          <p class="card-text">' . $recurso[1] . '</p>';
-    echo '        </div>';
-    echo '      </div>';
-    echo '    </div>';
-  }
+// Loop para gerar os cards
+foreach ($recursos as $recurso) {
+    list($titulo, $descricao, $icone) = $recurso;
 
-  echo '    </div>';
-  echo '  </div>';
-  echo '</section>';
+    echo <<<HTML
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+                <div class="mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi {$icone} text-dark" viewBox="0 0 16 16">
+                        <path d="M13 7c0 1.105-.672 2-1.5 2S10 8.105 10 7s.672-2 1.5-2S13 5.895 13 7zm-9 0c0 1.105.672 2 1.5 2S7 8.105 7 7s-.672-2-1.5-2S4 5.895 4 7zM10 8.5c.828 0 1.5.895 1.5 2S10.828 13 10 13H6c-.828 0-1.5-.895-1.5-2S5.172 8.5 6 8.5h4zM4.5 6a2.5 2.5 0 1 1 5 0 2.5 2.5 0 0 1-5 0z" />
+                    </svg>
+                </div>
+                <h5 class="card-title">{$titulo}</h5>
+                <p class="card-text">{$descricao}</p>
+            </div>
+        </div>
+    </div>
+HTML;
+}
 
+// Fechando as divs e a seção
+echo '</div></div></section>';
   // Produto
   echo '<section id="produto" class="py-5 bg-white">';
   echo '  <div class="container">';
   echo '    <h2 class="text-center mb-4">Nosso Produto</h2>';
   echo '    <div class="row align-items-center">';
   echo '      <div class="col-md-6">';
-  echo '        <img src="../assets/img/relatorio.png" class="img-fluid rounded shadow" alt="Interface do Sistema" />';
+  echo '        <img src="./assets/img/dash.png" class="img-fluid rounded shadow" alt="Interface do Sistema" />';
   echo '      </div>';
   echo '      <div class="col-md-6">';
   echo '        <h3 class="mb-3">Interface Intuitiva</h3>';
@@ -88,41 +90,39 @@
   echo '  </div>';
   echo '</section>';
 
-  // Contato
-  echo '<section id="contato" class="py-5">';
-  echo '  <div class="container">';
-  echo '    <h2 class="text-center mb-4">Entre em Contato</h2>';
-  echo '    <div class="row justify-content-center">';
-  echo '      <div class="col-md-6">';
-  echo '        <div class="card shadow-sm">';
-  echo '          <div class="card-body">';
-  echo '            <form>';
-  echo '              <div class="mb-3">';
-  echo '                <input type="text" class="form-control" placeholder="Nome" required />';
-  echo '              </div>';
-  echo '              <div class="mb-3">';
-  echo '                <input type="email" class="form-control" placeholder="Email" required />';
-  echo '              </div>';
-  echo '              <div class="mb-3">';
-  echo '                <textarea class="form-control" rows="4" placeholder="Mensagem" required></textarea>';
-  echo '              </div>';
-  echo '              <div class="d-grid">';
-  echo '                <button type="submit" class="btn btn-dark">Enviar</button>';
-  echo '              </div>';
-  echo '            </form>';
-  echo '          </div>';
-  echo '        </div>';
-  echo '      </div>';
-  echo '    </div>';
-  echo '  </div>';
-  echo '</section>';
-
-  echo '<a href="../Dashboard/app.php" class="btn btn-primary download-btn">ver</a>';
+  // Seção de Contato
+echo '<section id="contato" class="py-5">';
+echo '  <div class="container">';
+echo '    <h2 class="text-center mb-4">Entre em Contato</h2>';
+echo '    <div class="row justify-content-center">';
+echo '      <div class="col-md-6">';
+echo '        <div class="card shadow-sm">';
+echo '          <div class="card-body">';
+echo '            <form action="contact.php" method="POST">'; // Adicionado action e method
+echo '              <div class="mb-3">';
+echo '                <input type="text" class="form-control" name="nome" placeholder="Nome" required />'; // Adicionado name
+echo '              </div>';
+echo '              <div class="mb-3">';
+echo '                <input type="email" class="form-control" name="email" placeholder="Email" required />'; // Adicionado name
+echo '              </div>';
+echo '              <div class="mb-3">';
+echo '                <textarea class="form-control" name="mensagem" rows="4" placeholder="Mensagem" required></textarea>'; // Adicionado name
+echo '              </div>';
+echo '              <div class="d-grid">';
+echo '                <button type="submit" class="btn btn-dark">Enviar</button>';
+echo '              </div>';
+echo '            </form>';
+echo '          </div>';
+echo '        </div>';
+echo '      </div>';
+echo '    </div>';
+echo '  </div>';
+echo '</section>';
 
   // Footer
   echo '<footer class="bg-dark text-white text-center py-3">';
   echo '  <div class="container">';
-  echo '    <p class="mb-0">PC Auto © 2025. Todos os direitos reservados.</p>';
+  echo '    <p class="mb-0">Myoffice © 2025. Todos os direitos reservados.</p>';
   echo '  </div>';
   echo '</footer>';
 
