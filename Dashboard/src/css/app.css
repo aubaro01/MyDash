@@ -1,0 +1,161 @@
+/* Variáveis CSS para o tema claro */
+:root {
+    --primary-color: #f5f7fa;
+    --secondary-color: #c3cfe2;
+    --background-color: #ffffff;
+    --text-color: #343a40;
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+    --button-bg-color: #007bff;
+    --button-hover-color: #0056b3;
+    --card-bg-color: #ffffff;
+    --card-hover-bg-color: #f8f9fa;
+    --border-color: #e6e5e5;
+}
+
+/* Variáveis CSS para o tema escuro */
+[data-theme="dark"] {
+    --primary-color: #3A3B3C;
+    --secondary-color: #242526;
+    --background-color: #18191A;
+    --text-color: #E4E6EB;
+    --box-shadow-color: rgba(255, 255, 255, 0.1);
+    --button-bg-color: #1a73e8;
+    --button-hover-color: #1557b0;
+    --card-bg-color: #242526;
+    --card-hover-bg-color: #3A3B3C;
+    --border-color: #4D4C4C;
+}
+
+/* Estilos Gerais */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.main-content {
+    margin-left: 250px; /* Ajuste conforme a largura da navbar */
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para o Título */
+.section-header {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: var(--text-color);
+    text-align: center;
+    font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+/* Estilos para a Descrição do Aplicativo */
+.app-description {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.app-description .col-md-6 {
+    flex: 1 1 45%;
+    background: var(--card-bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--box-shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-description .col-md-6:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px var(--box-shadow-color);
+}
+
+.app-description img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Estilos para as Funcionalidades */
+.app-details {
+    margin-top: 30px;
+    padding: 30px;
+    background: var(--card-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--box-shadow-color);
+}
+
+.app-details h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.app-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.app-details ul li {
+    background: var(--card-hover-bg-color);
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+/* Estilos para o Botão de Download */
+.download-btn {
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 15px 30px;
+    background-color: var(--button-bg-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* Estilos para a Imagem da Tela do App */
+.text-center.my-4 img {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--box-shadow-color);
+}
+
+/* Estilos para as Instruções de Instalação */
+.app-details.mt-4 {
+    margin-top: 30px;
+}
+
+.app-details.mt-4 h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.app-details.mt-4 p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+

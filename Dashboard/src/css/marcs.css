@@ -1,0 +1,165 @@
+.btn-btn-add {
+    background-color: #4CAF50; /* Verde */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-btn-add:hover {
+    background-color: #45a049; /* Verde mais escuro */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-btn-add:active {
+    background-color: #3d8b40; /* Verde ainda mais escuro */
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* === Estilo para os Modais === */
+.modal {
+    display: none; /* Esconde o modal por padrão */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px; /* Largura máxima do modal */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease;
+    position: relative;
+}
+
+/* Animação de entrada do modal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Botão de fechar o modal */
+.modal-content .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modal-content .close:hover {
+    color: #ff7675; /* Vermelho suave ao passar o mouse */
+}
+
+/* Título do modal */
+.modal-content h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+/* Formulário dentro do modal */
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal-content label {
+    font-size: 14px;
+    color: #555;
+    font-weight: 500;
+}
+
+.modal-content select,
+.modal-content input,
+.modal-content textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    background-color: #f8f9fa;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modal-content select:focus,
+.modal-content input:focus,
+.modal-content textarea:focus {
+    border-color: #6c5ce7; /* Roxo moderno ao focar */
+    outline: none;
+    box-shadow: 0 0 8px rgba(108, 92, 231, 0.2);
+}
+
+.modal-content textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+    min-height: 100px;
+}
+
+/* Botão de submit no modal */
+.modal-content button[type="submit"] {
+    padding: 12px;
+    background-color: #6c5ce7; /* Roxo moderno */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modal-content button[type="submit"]:hover {
+    background-color: #5a4dbf; /* Roxo mais escuro ao passar o mouse */
+    transform: translateY(-2px);
+}
+
+.modal-content button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 20px;
+        width: 95%;
+    }
+
+    .modal-content h2 {
+        font-size: 20px;
+    }
+
+    .modal-content button[type="submit"] {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
