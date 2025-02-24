@@ -46,7 +46,7 @@
 
     <!-- Imagem da tela do app -->
     <div class="text-center my-4">
-        <img src="https://via.placeholder.com/800x400" alt="Tela do aplicativo" class="img-fluid">
+        <img src="/public/assets/img/dash.png" alt="Tela do aplicativo" class="img-fluid">
     </div>
 
     <!-- Botão de download -->
