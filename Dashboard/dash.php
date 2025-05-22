@@ -11,10 +11,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     exit;
 }
 
-// Inicializa a conexão com o banco de dados
 $db = new db;
 
-// Obtém as marcações do dia
 $appointments = getMarcacoesDoDia($db);
 ?>
 
@@ -44,9 +42,7 @@ $appointments = getMarcacoesDoDia($db);
         <p>Algumas estatísticas do seu negocio</p>
     </div>
 
-    <!-- Cards de Estatísticas e Tabela -->
     <div class="dashboard-content">
-        <!-- Cards -->
         <div class="cards-container">
             <div class="card">
                 <i class="uil uil-shopping-cart-alt"></i>
@@ -72,7 +68,6 @@ $appointments = getMarcacoesDoDia($db);
             </div>
         </div>
 
-        <!-- Tabela de Marcações -->
         <div class="daily-appointments">
             <h3>Marcações do Dia</h3>
             <?php

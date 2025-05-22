@@ -67,7 +67,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div> 
 </section>
 
-<!-- Modal para Adicionar Cliente -->
 <div id="addClientModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeModal('addClientModal')">&times;</span>
@@ -89,7 +88,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </div>
 
-<!-- Modal para Editar Cliente -->
 <div id="editClientModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeModal('editClientModal')">&times;</span>
@@ -112,7 +110,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </div>
 
-<!-- JavaScript -->
 <script>
 function closeModal(modalId) {
     document.getElementById(modalId).style.display = 'none';

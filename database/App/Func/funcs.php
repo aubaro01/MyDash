@@ -13,7 +13,7 @@ function checkCredentials($db, $email, $password)
     return false;
 }
 
-// Procura do produto 
+
 
 function procuraProdutos($db, $procura){
     $sql = "SELECT * FROM produto WHERE produtoNAME = ?";
@@ -41,7 +41,7 @@ function getAppointmentsForToday($db){
     return $appointments;
 }
 
-//Tabela para ver os produtos
+
 
 function GETABProdutos($db)
 {

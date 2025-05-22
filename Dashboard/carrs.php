@@ -4,7 +4,6 @@ require_once '../database/db.php';
 require_once '../database/config.php';
 require_once '../database/App/models/veiculos.php';
 
-// Processamento de formulários
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $db = new DB();
 
@@ -71,7 +70,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ?>
     </div> 
 </section>
-<!-- Modal para Adicionar Veículo -->
 <div id="addVehicleModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeModal('addVehicleModal')">&times;</span>
@@ -122,7 +120,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </div>
 
-<!-- Modal para Editar Veículo -->
 <div id="editVehicleModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeModal('editVehicleModal')">&times;</span>
@@ -173,7 +170,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
     </div>
 </div>
-<!-- JavaScript -->
 <script>
 function closeModal(modalId) {
     document.getElementById(modalId).style.display = 'none';

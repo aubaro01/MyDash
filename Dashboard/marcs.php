@@ -40,7 +40,6 @@ require_once '../database/App/models/marcacao.php';
     </div> 
 </section>
 
-<!-- Modal para Adicionar Marcação -->
 <div id="addMarcacaoModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeModal('addMarcacaoModal')">&times;</span>
@@ -50,12 +49,10 @@ require_once '../database/App/models/marcacao.php';
             <label for="marcacaoVeiculo">Veículo:</label>
             <select id="marcacaoVeiculo" name="id_veiculo" required>
                 <option value="">Selecione um veículo</option>
-                <!-- Opções do veículo -->
             </select>
             <label for="marcacaoTipo">Tipo de Marcação:</label>
             <select id="marcacaoTipo" name="id_TipoMarc" required>
                 <option value="">Selecione um tipo</option>
-                <!-- Opções do tipo de marcação -->
             </select>
             <label for="marcacaoData">Data e Hora:</label>
             <input type="datetime-local" id="marcacaoData" name="Data_Marc" required>
@@ -71,7 +68,6 @@ require_once '../database/App/models/marcacao.php';
     </div>
 </div>
 
-<!-- Modal para Editar Marcação -->
 <div id="editMarcacaoModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeModal('editMarcacaoModal')">&times;</span>
@@ -82,12 +78,10 @@ require_once '../database/App/models/marcacao.php';
             <label for="editMarcacaoVeiculo">Veículo:</label>
             <select id="editMarcacaoVeiculo" name="id_veiculo" required>
                 <option value="">Selecione um veículo</option>
-                <!-- Opções do veículo -->
             </select>
             <label for="editMarcacaoTipo">Tipo de Marcação:</label>
             <select id="editMarcacaoTipo" name="id_TipoMarc" required>
                 <option value="">Selecione um tipo</option>
-                <!-- Opções do tipo de marcação -->
             </select>
             <label for="editMarcacaoData">Data e Hora:</label>
             <input type="datetime-local" id="editMarcacaoData" name="Data_Marc" required>
@@ -102,7 +96,6 @@ require_once '../database/App/models/marcacao.php';
         </form>
     </div>
 </div>
-<!-- JavaScript -->
 <script>
 function closeModal(modalId) {
     document.getElementById(modalId).style.display = 'none';

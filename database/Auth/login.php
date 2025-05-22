@@ -6,7 +6,7 @@ $error = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     require '../../database/db.php';
-    require_once '../App/Func/funcs.php'; // Verifique se este caminho está correto
+    require_once '../App/Func/funcs.php'; 
     
     $db = new DB();
     
@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['loggedin'] = true;
             $_SESSION['email'] = $email;
 
-            // Pegar o nome de log do administrador
+            
             $sql = "SELECT Log_admin FROM admin WHERE Log_admin = ?";
             $args = array($email);
             $result = $db->send2db($sql, $args);
@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="login.css" rel="stylesheet"> <!-- Se você tiver um CSS personalizado -->
+    <link href="login.css" rel="stylesheet"> 
 </head>
 <body>
     <div class="login-container">
@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </button>
             </form>
 
-            <!-- Botão "Voltar para a Home" -->
+        
             <button
                 onclick="window.location.href = '../../index.php';"
                 class="btn btn-secondary w-100 mt-3">

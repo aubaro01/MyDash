@@ -17,11 +17,9 @@
 </header>
 <section class="main-content">
 <div class="container">
-    <!-- Título -->
     <h1 class="section-header">Bem-vindo ao Nosso Aplicativo!</h1>
     <p class="text-center">Descubra como nosso aplicativo pode facilitar o seu dia a dia!</p>
 
-    <!-- Descrição do Aplicativo -->
     <div class="app-description">
         <div class="col-md-6">
             <h2>O que é o nosso aplicativo?</h2>
@@ -33,7 +31,6 @@
         </div>
     </div>
 
-    <!-- Funcionalidades -->
     <div class="app-details">
         <h3>Funcionalidades principais:</h3>
         <ul>
@@ -44,17 +41,14 @@
         </ul>
     </div>
 
-    <!-- Imagem da tela do app -->
     <div class="text-center my-4">
         <img src="/public/assets/img/dash.png" alt="Tela do aplicativo" class="img-fluid">
     </div>
 
-    <!-- Botão de download -->
     <div class="text-center">
         <a href="path-to-your-app-download-file.exe" class="btn btn-primary download-btn">Baixar Agora</a>
     </div>
 
-    <!-- Instruções de instalação -->
     <div class="app-details mt-4">
         <h3>Instruções para instalar:</h3>
         <p>1. Clique no botão "Baixar Agora" para iniciar o download do aplicativo.</p>
@@ -63,7 +57,6 @@
     </div>
 </div>
 </section>
-<!-- Scripts necessários para o funcionamento -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

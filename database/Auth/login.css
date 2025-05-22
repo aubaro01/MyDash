@@ -1,4 +1,4 @@
-/* Fundo com gradiente cinza-escuro */
+
 .login-container {
     display: flex;
     justify-content: center;
@@ -8,7 +8,7 @@
     padding: 1rem;
   }
   
-  /* Card com efeito glassmorphism */
+
   .login-card {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
@@ -32,7 +32,7 @@
     }
   }
   
-  /* Título do login */
+
   .login-title {
     font-size: 2rem;
     font-weight: bold;
@@ -42,7 +42,7 @@
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
   }
   
-  /* Formulário */
+
   .form-group {
     margin-bottom: 1.5rem;
   }
@@ -54,7 +54,7 @@
     margin-bottom: 0.5rem;
   }
   
-  /* Agrupamento para input de senha e botão */
+
   .input-wrapper {
     position: relative;
   }

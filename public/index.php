@@ -10,7 +10,6 @@
   echo '</head>';
   echo '<body>';
 
-  // Navbar
   echo '<nav class="navbar navbar-expand-md navbar-light bg-white shadow fixed-top">';
   echo '  <div class="container">';
   echo '    <a class="navbar-brand fw-bold text-dark" href="/">MyOffice</a>';
@@ -28,13 +27,13 @@
   echo '  </div>';
   echo '</nav>';
 
-  // Hero Section
+
   echo '<section class="d-flex flex-column align-items-center justify-content-center text-white text-center" style="height: 100vh; background: linear-gradient(to right, #343a40, #6c757d)">';
   echo '  <h1 class="display-4 fw-bold">MyOffice</h1>';
   echo '  <p class="lead">Gestão inteligente para oficinas automotivas</p>';
   echo '</section>';
 
-  // Recursos
+ 
   echo '<section id="recursos" class="py-5">';
   echo '  <div class="container">';
   echo '    <h2 class="text-center mb-4">Recursos</h2>';
@@ -46,7 +45,7 @@
     ["Agendamentos", "Gerencie e automatize as marcações.", "bi-calendar-check"]
 ];
 
-// Loop para gerar os cards
+
 foreach ($recursos as $recurso) {
     list($titulo, $descricao, $icone) = $recurso;
 
@@ -67,9 +66,9 @@ foreach ($recursos as $recurso) {
 HTML;
 }
 
-// Fechando as divs e a seção
+
 echo '</div></div></section>';
-  // Produto
+
   echo '<section id="produto" class="py-5 bg-white">';
   echo '  <div class="container">';
   echo '    <h2 class="text-center mb-4">Nosso Produto</h2>';
@@ -90,7 +89,7 @@ echo '</div></div></section>';
   echo '  </div>';
   echo '</section>';
 
-  // Seção de Contato
+
 echo '<section id="contato" class="py-5">';
 echo '  <div class="container">';
 echo '    <h2 class="text-center mb-4">Entre em Contato</h2>';
@@ -98,15 +97,15 @@ echo '    <div class="row justify-content-center">';
 echo '      <div class="col-md-6">';
 echo '        <div class="card shadow-sm">';
 echo '          <div class="card-body">';
-echo '            <form action="contact.php" method="POST">'; // Adicionado action e method
+echo '            <form action="contact.php" method="POST">'; 
 echo '              <div class="mb-3">';
-echo '                <input type="text" class="form-control" name="nome" placeholder="Nome" required />'; // Adicionado name
+echo '                <input type="text" class="form-control" name="nome" placeholder="Nome" required />'; 
 echo '              </div>';
 echo '              <div class="mb-3">';
-echo '                <input type="email" class="form-control" name="email" placeholder="Email" required />'; // Adicionado name
+echo '                <input type="email" class="form-control" name="email" placeholder="Email" required />'; 
 echo '              </div>';
 echo '              <div class="mb-3">';
-echo '                <textarea class="form-control" name="mensagem" rows="4" placeholder="Mensagem" required></textarea>'; // Adicionado name
+echo '                <textarea class="form-control" name="mensagem" rows="4" placeholder="Mensagem" required></textarea>'; 
 echo '              </div>';
 echo '              <div class="d-grid">';
 echo '                <button type="submit" class="btn btn-dark">Enviar</button>';
@@ -119,14 +118,13 @@ echo '    </div>';
 echo '  </div>';
 echo '</section>';
 
-  // Footer
   echo '<footer class="bg-dark text-white text-center py-3">';
   echo '  <div class="container">';
   echo '    <p class="mb-0">Myoffice © 2025. Todos os direitos reservados.</p>';
   echo '  </div>';
   echo '</footer>';
 
-  // Scripts Bootstrap
+  
   echo '<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>';
   echo '</body>';
   echo '</html>';

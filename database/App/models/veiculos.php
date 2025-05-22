@@ -11,7 +11,7 @@ function addCarrs($db, $idC, $idM, $idMod, $matricula, $km, $obs) {
     return $stmt;
 }
 
-// Função para editar um veículo
+
 function editCarrs($db, $id, $idCliente, $idMarca, $idModelo, $matricula, $km, $obs) {
     $sql = "UPDATE veiculo SET id_Cliente=?, id_Marca=?, id_Modelo=?, Matricula_veiculo=?, Km_veiculo=?, obs=? WHERE id_Veiculo=?";
     $stmt = $db->send2db($sql, [$idCliente, $idMarca, $idModelo, $matricula, $km, $obs, $id]);
@@ -23,7 +23,7 @@ function editCarrs($db, $id, $idCliente, $idMarca, $idModelo, $matricula, $km, $
     return $stmt;
 }
 
-// Função para excluir um veículo
+
 function deleteCarrs($db, $id) {
     $sql = "DELETE FROM veiculo WHERE id_Veiculo=?";
     $stmt = $db->send2db($sql, [$id]);
@@ -35,7 +35,7 @@ function deleteCarrs($db, $id) {
     return $stmt;
 }
 
-// Função para contar veículos
+
 function CountallCarrs($db) {
     $sql = "SELECT COUNT(*) AS Total_Veiculos FROM veiculo";
     $result = $db->send2db($sql);
@@ -48,7 +48,7 @@ function CountallCarrs($db) {
     return $row['Total_Veiculos'];
 }
 
-// Função para exibir veículos
+
 function getCarrs($db) {
     $sql = "
         SELECT 

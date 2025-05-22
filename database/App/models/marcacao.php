@@ -110,10 +110,8 @@ function getMarcacoes($db) {
     }
 }
 function getMarcacoesDoDia($db) {
-    // Obtém a data atual no formato YYYY-MM-DD
+   
     $dataAtual = date('Y-m-d');
-
-    // Consulta SQL para buscar as marcações do dia corrente
     $sql = "
         SELECT 
             m.id_Marcacao, 

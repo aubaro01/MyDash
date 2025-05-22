@@ -2,7 +2,6 @@
 class DB {
     private $conn;
 
-    // Conecta ao banco de dados
     public function connect() {
         mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
         $this->conn = new mysqli("localhost", "root", "", "pcauto");
